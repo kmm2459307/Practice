@@ -44,7 +44,21 @@ int main()
 void ReverseArray(int array[], int arraySize)
 {
     // ここをコーディングしてください。
-
+    for (int i = 0; i < arraySize / 2; i++) {
+        for (int i = 0; i < arraySize; i++) {
+            printf("%d ", array[i]);
+        }
+        printf("\n");
+        int t = array[i];
+        array[i] = array[arraySize - i - 1];
+        array[arraySize - i - 1] = t;
+        printf("array[%d]とarray[%d]を交換しました。\n", array[i], array[arraySize - i - 1]);
+    }
+    for (int i = 0; i < arraySize; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+    printf("反転が終了しました。\n");
 }
 
 void dumpArray(int array[], int arraySize)
